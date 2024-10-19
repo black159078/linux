@@ -1,0 +1,39 @@
+=> Upload Project to Cloud VPS (static website)
+
+git -v
+git config --global user.name "dataland"
+git config user.name
+git config --global user.email "datalandtechnology@gmail.com"
+git config user.email
+
+
+ssh-keygen
+ls -la
+cat /root/.ssh/id_ed25519.pub
+
+ssh -T git@github.com
+
+cd /var/www/html
+git clone git@github.com:datalandtechnology/admintemplate.git
+ls -l
+
+
+=> Pull request for latest changes
+cd /var/www/html/admintemplate
+git pull origin main
+
+---------------------------------------------------------------
+
+
+=> Apache Config for default directory
+=Change Ownership and permission ( -R = recursive )
+sudo chown -R www-data:www-data /var/www/html/admintemplate
+sudo chmod -R 755 /var/www/html/admintemplate
+
+= Modify the apache condiguration file
+sudo nano /etc/apache2/sites-available/000-default.conf
+
+= Find & Edit
+DocumentRoot /var/www/html change to DocumentRoot /var/www/html/admintemplate
+
+sudo systemctl restart apache2

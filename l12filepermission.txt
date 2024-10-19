@@ -1,0 +1,96 @@
+=> File Permission
+
+ls -l
+
+=> Note
+-           File
+d           Directory
+
+drwxrwxr-x 3 lin lin  4096 Feb  7 11:58 yourfolder9
+
+drwxrwxr-x              = Permission
+3                       = numbers of links
+lin                     = owner name
+lin                     = group name
+4096                    = number of bytes in the File
+Feb  7                  = Last modification time
+l11symboliclink.txt     = File name
+
+.           This directory
+..          The parent directory
+
+
+ls -l
+cd l11folder
+ls -la
+
+cd -
+
+ld -l
+cd yourfolder9
+ls -l
+ls -la
+
+cd myfolder10
+ls -la
+
+cd yourfolder8
+ls -la
+
+
+=======================================================
+
+
+
+=> File Permission
+
+Read (r)            = 4            allows a file to be Read
+Write(w)            = 2            allows a file to modefied
+Execute(x)          = 1            allows th execution of a file
+
+
+=> Permission Categories
+Category     Symbol
+User            u
+Group           g
+Other           o
+All             a
+
+
+=> Changing Permissions
+Item                Meaning
+chmod               Change mode command
+ugoa                user group other all
++-=                 Add,Subtract,Set permission
+rwx                 Read,Write,Execute
+
+
+
+=> Directory Listing Attributes
+
+numeric value      4(read)      2(write)   1(execute)   Permission Name    
+0                   -               -           -        no permission
+1                   -               -           x        execute only
+2                   -               x           -        write only
+3                   -               x           x        write and execute
+4                   x               -           -        read only
+5                   x               -           x        read and execute
+6                   x               x           -        read and write
+7                   x               x           x        read , write and execute
+
+(Note:to go)
+d or -              rwx            rwx              rwx
+type               user/owner     group            other
+
+
+
+=> Commonly Used Permission
+Symbolic                        Octal
+-rwx------                      700
+-rwxr-xr-x                      755
+-rw-rw-r--                      644
+-rw-rw----                      660
+-rw-r--r--                      644
+-rwxrwxrwx                      777
+
+

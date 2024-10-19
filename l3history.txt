@@ -1,0 +1,69 @@
+History commands
+
+==>Clear Terminal
+Clear
+ctrl+m+l        (clear)
+
+ctrl+m          (New line)
+ctrl+l          (clear)
+
+
+
+==>Close Terminal
+exit
+ctrl+d
+
+==>Cursor to start char in Terminal
+ctrl+a
+
+==>Cursor to end char in Terminal
+ctrl+e
+
+==>Find used commands again
+ctl+r
+enter (if you want to use)
+ctl+g (if you want to cancel)
+
+==>Command Callback
+
+Press up arrow key     (callback)
+Press down arrow key   (callback)
+!!                     (callback last command and run again)
+history                (see all commands histroy)
+histroy 5              (see last 5 commands history)
+!1453                  (callback history form commands history and run again)
+!1457:p                (get command from commands history just print)
+history -c             (clear all history)
+
+==>wget
+https://w0.peakpx.com/wallpaper/209/34/HD-wallpaper-cute-puppy-dog-dogs-puppies-sweet-white.jpg
+
+
+=> Check all history in .bash_history file
+ctl+alt+t
+ls
+ls -l
+ls -a
+ls -l -a
+ls -la or ls -al
+ls -lah or ls -alh
+cat .bash_history
+vim .bash_history
+ctl+c
+:qa
+
+
+=>Ignore Space & Ignore Multiple times
+ls -l -a
+history
+ ls -la
+history
+cd
+cd
+cd
+cd
+cd
+history ( if type many times ! history recorded only one times )
+
+
+

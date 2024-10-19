@@ -1,0 +1,222 @@
+=>For Shutdown
+sudo poweroff
+
+=>For restart(reboot)
+sudo reboot
+
+=>Check Currently User
+who
+whoami
+
+=>Check Host Name
+hostname       //administrator
+
+
+=>Check 32bit precessor or 64bit processor
+uname -a
+uname -i or uname -m
+getconf LONG_BIT
+
+
+=> Login as Root User
+apt-get-update   //13: Permission denied
+
+sudo -s
+Enter lin user password
+apt-get update
+exit
+
+(or)
+
+sudo su
+apt-get update
+whoami          //root
+exit
+
+
+=> Setpassword or Changing root's password
+sudo passwd root
+new password : 123456789
+return new password : 123456789
+
+=>Login as Root User
+=>Method 1
+sudo -s
+
+=>Method 2          
+sudo su
+whoami
+exit
+
+=>Method 3           ( su = switch user)
+su-                 (root@Hp:)
+password : 123456789
+whoami
+exit
+
+=>Method 4
+su                  (root@Hp:/home/lin#)
+password : 123456789
+whoami
+exit
+
+
+=>Changing Password of Current User
+su
+password : 123456789
+who am i
+
+passwd
+current password:123456789
+New password:123456789abc
+retry New password:123456789abc
+
+=>Create New User Account
+=>Method 1
+sudo useradd user1              (just created account, without user1 folder)
+
+=>Method 2                      (cd /,cd home , ls = you will see system created user2 folder in under home )
+sudo useradd user2 -m
+sudo useradd user3 -m
+
+
+=>Display all users
+compgen -u                                          (only username)
+getent passwd   (or)  cat /etc/passwd               (all info)
+
+
+=>Display single users
+getent passwd user1                 (single user all info)
+id                                  (current login user info)
+id user1                            (single user group info)
+
+
+
+
+=>Set new user password in terminal
+sudo passwd user1
+new password : 123456789
+return new password : 123456789
+
+sudo passwd user2
+new password : 123456789
+return new password : 123456789
+
+sudo passwd user3
+new password : 123456789
+return new password : 123456789
+
+
+
+=>Switch user in terminal
+su user1
+password : 123456789
+whoami
+exit
+
+
+
+ls -l
+su user1
+password:123456789
+whoami
+cd /
+ls -l
+cd home
+ls -l
+cd lin              (error can't access)
+cd user3            (error can't access)
+cd user2            (error can't access)
+mkdir userfolder1   (error can't access)
+ls
+exit
+
+
+ls -l
+su user2
+password:123456789
+whoami
+cd /
+ls -l
+cd home
+ls -l
+cd lin              (error can't access)
+cd user3            (error can't access)
+cd user2
+mkdir userfolder2
+echo "Hello" > file0.txt
+ls
+exit
+
+ls -l
+su user3
+password:123456789
+whoami
+cd /
+ls -l
+cd home
+ls -l
+cd lin              (error can't access)
+cd user3
+cd user2            (error can't access)
+mkdir userfolder3
+echo "Hello" > file0.txt
+ls
+exit
+
+
+
+
+
+=>Delete User
+=>Method 1
+sudo deluser user2  (or) sudo userdel user1             (delete user without deleting user files and directories)
+=>Method 2
+sudo deluser --remove-home user3                        (delete user deleting user files and directories)
+
+
+
+id user2
+compgen -u
+cd /
+ls
+cd home
+ls -l                                         (result = remain only administrator $ user2 folders)
+
+
+
+
+
+
+sudo useradd user1          (without message / without password / without info)
+compgen -u
+
+sudo adduser user2          (with message / with password / with info)
+compgen -u
+
+
+sudo useradd user3 -m
+compgen -u
+=>sudo passwd user3
+new password = 123456789
+=>su user3
+password = 123456789
+whoami
+exit
+whoami
+
+
+=>Lock or Unlock user password
+sudo passwd -l user3      (Lock)
+sudo passwd -u user3      (Unlock)
+
+=>sudo passwd -l user3
+su user3
+password = 123456789
+whoami
+
+sudo password -u user3
+su user3
+password = 123456789
+whoami
+exit

@@ -1,0 +1,74 @@
+=>32bit vs 64bit
+
+
+
+Free
+Not user-friendly
+Very reliable.
+best for multi-tasking
+very secure
+open to pulbic(open source)
+
+==>Linux Kernel
+
+==>Linux Distribution
+https://distrowatch.com/
+https://distrowatch.com/ > (Menu Bar) > Page Hit Ranking
+
+
+Ubuntu           Free
+CentOS           Free
+Redhat           paid(not open source)
+Fedora           Free   
+SuSe             Free and Paid
+Debian           Free
+Linux Mint       Free
+Arch Linux       Free
+
+
+
+==>Open Terminal ( Linux is Case sensitive Operation Ststem )
+ctl+alt+t
+
+
+
+==>Linux Color Coading
+Blue = Directory (such as url,etc...)
+Green = Executble or recognized data file
+Skyblue = Symbolic link file
+Pink = Graphic image file
+Red = Archive file(zip,tar,tar.gz etc...)
+
+==>Common Dirctories
+/           "Root" the top of the file system
+/bin        Binary or executable programs
+/etc        System configuration files
+/home       home directory. it is the default current directory
+/opt
+/tmp
+/usr
+/var
+
+
+==>Basic Line Commands
+ls  -  Lists directory contents
+cd  -  Changes the current directory
+pwd -  Displays the present wording directory
+cat -  Concatenates and display file
+echo - Display aregrments to the screen
+clear - Clear the screen
+
+==>APT (Advanced Packaging Tool)
+update(package)
+sudo apt-get update
+sudo apt update
+
+upgrade(version)
+sudo apt-get upgrade
+sudo apt upgrade
+
+
+
+when you install a application on linux os,type this Commands
+sudo apt-get update
+sudo apt-get upgrade
